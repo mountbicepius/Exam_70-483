@@ -1,0 +1,12 @@
+Here you see another feature of the .NET Framework. You can use the Thread.CurrentThread
+class to ask for information about the thread that’s executing. This is called the
+thread’s *execution context*
+
+If you want to use local data in a thread and initialize it for each thread, you can use the
+ThreadLocal<T> class.
+
+A thread’s current culture (a CultureInfo associated with the current thread that is used to format dates,
+times, numbers, currency values, the sorting order of text, casing conventions, and string
+comparisons), principal (representing the current security context), priority (a value to indicate
+how the thread should be scheduled by the operating system), and other info.
+
