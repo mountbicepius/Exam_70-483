@@ -1,9 +1,9 @@
 using System;
 using System.Threading;
 
-namespace chapter1
+namespace exam_70483
 {
-    public static class program
+    public static class List_1_1
     {
         public static void threadMethod()
         {

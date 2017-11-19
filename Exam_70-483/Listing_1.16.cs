@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 namespace Chapter1
 {
-    public static class Program
+    public static class List_1_16
     {
         public static void Main()
         {

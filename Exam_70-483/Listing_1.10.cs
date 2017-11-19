@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 namespace Chapter1
 {
-    public static class Program
+    public static class List_1_10
     {
         public static void Main()
         {

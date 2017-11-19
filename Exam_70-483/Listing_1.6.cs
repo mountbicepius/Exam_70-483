@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 namespace Chapter1
 {
-    public static class Program
+    public static class List_1_6
     {
         public static ThreadLocal<int> _field = 
             new ThreadLocal<int>(() => 

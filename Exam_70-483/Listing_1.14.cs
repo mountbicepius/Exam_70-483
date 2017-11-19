@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 namespace Chapter1
 {
-    public static class Program
+    public static class List_1_14
     {
         public static void Main()
         {

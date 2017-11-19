@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace chapter1
 {
-    public static class Program
+    public static class List_1_4
     {
          public static void ThreadMethod(object o)
         {
