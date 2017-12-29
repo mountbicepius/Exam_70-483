@@ -3,11 +3,12 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.ExceptionServices;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Reflection;
+using System.Dynamic;
 
 namespace Exam_70_483
 {
@@ -15,31 +16,23 @@ namespace Exam_70_483
     {
         public static void Main()
         {
-            Deck deck = new Deck(5);
-            Card cr = new Card();
-            cr.name = Console.ReadLine();
-            foreach (var cr1 in deck.Cards)
-            {
-               Console.Write("\r{0}%", cr1.ToString());
-            }
         }
     }
-    class Card
+    interface IEntity
     {
-        public string name{ get; set; }
-        public Card()
-        {
-            this.name = null;
-        }
+        int Id { get; }
     }
-    class Deck
+    class Repository<T>
+     where T : IEntity
     {
-        private int _maximumNumberOfCards;
-        public List<Card> Cards { get; set; }
-        public Deck(int maximumNumberOfCards)
+        protected IEnumerable<T> _elements;
+        public Repository(IEnumerable<T> elements)
         {
-            this._maximumNumberOfCards = maximumNumberOfCards;
-            Cards = new List<Card>();
+            _elements = elements;
+        }
+        public T FindById(int id)
+        {
+            return _elements.SingleOrDefault(e => e.Id == id);
         }
     }
 }
